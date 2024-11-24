@@ -10,9 +10,10 @@
             margin: 0;
             overflow: hidden; /* Prevents scrolling */
             height: 100%; /* Ensures the content fits the viewport */
+            background-color: black; /* Fallback color */
         }
 
-        /* Rotating background */
+        /* Rotating image */
         #rotating-background {
             position: absolute;
             top: 0;
@@ -20,8 +21,19 @@
             width: 100vw;
             height: 100vh;
             background: url('what.jpg') no-repeat center center;
-            background-size: cover;
+            background-size: cover; /* Ensures image covers the screen */
             animation: rotate 20s linear infinite; /* Infinite rotation */
+        }
+
+        /* Welcome text styling */
+        .welcome-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centers the text */
+            font-family: Arial, sans-serif; /* Plain font */
+            font-size: 24px; /* Standard readable size */
+            color: white; /* Stands out on the black background */
         }
 
         /* Keyframes for rotation */
@@ -37,5 +49,6 @@
 </head>
 <body>
     <div id="rotating-background"></div>
+    <div class="welcome-text">Welcome to My Website</div>
 </body>
 </html>
