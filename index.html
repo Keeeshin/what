@@ -8,10 +8,16 @@
         body {
             margin: 0;
             height: 100vh;
+            width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('what.jpg') no-repeat center center/cover;
+            background: url('background.jpg') no-repeat center center;
+            background-size: 100% 100%; /* Stretches the image to fill the screen */
+        }
+
+        html, body {
+            overflow: hidden; /* Prevents scrolling */
         }
     </style>
 </head>
