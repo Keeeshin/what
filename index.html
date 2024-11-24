@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ninja what</title>
+    <title>Rotating Background</title>
     <style>
         body {
             margin: 0;
@@ -12,17 +12,36 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('what.jpg') no-repeat center center;
-            background-size: 200% 100%; /* Stretches the image to fill the screen */
+            overflow: hidden; /* Prevents scrolling */
+            background-color: black; /* Fallback color */
+        }
+
+        #rotating-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center;
+            background-size: cover;
+            animation: rotate 20s linear infinite; /* Applies the rotation animation */
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         html, body {
-            overflow: hidden; /* Prevents scrolling */
-        }
+              overflow: hidden; /* Prevents scrolling */
+          }
     </style>
 </head>
 <body>
-</body>
-    <div style="color: white; font-size: 2rem;">Welcome to My Website</div>
+    <div id="rotating-background"></div>
 </body>
 </html>
