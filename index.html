@@ -10,7 +10,7 @@
             margin: 0;
             overflow: hidden; /* Prevents scrolling */
             height: 100%; /* Ensures the content fits the viewport */
-            background-color: black; /* Fallback color */
+            background-color: black; /* Static black background */
         }
 
         /* Rotating image */
@@ -21,7 +21,7 @@
             width: 100vw;
             height: 100vh;
             background: url('what.jpg') no-repeat center center;
-            background-size: 100% 100%; /* Stretches the image to fill the screen */
+            background-size: cover;
             animation: rotate 20s linear infinite; /* Infinite rotation */
         }
 
@@ -49,6 +49,6 @@
 </head>
 <body>
     <div id="rotating-background"></div>
-    <div class="welcome-text">welcome to my website</div>
+    <div class="welcome-text">Welcome to My Website</div>
 </body>
 </html>
