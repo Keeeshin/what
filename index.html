@@ -5,28 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotating Background</title>
     <style>
-        body {
+        /* Disable scrolling */
+        html, body {
             margin: 0;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             overflow: hidden; /* Prevents scrolling */
-            background-color: black; /* Fallback color */
+            height: 100%; /* Ensures the content fits the viewport */
         }
 
+        /* Rotating background */
         #rotating-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: url('background.jpg') no-repeat center center;
+            background: url('what.jpg') no-repeat center center;
             background-size: cover;
-            animation: rotate 20s linear infinite; /* Applies the rotation animation */
+            animation: rotate 20s linear infinite; /* Infinite rotation */
         }
 
+        /* Keyframes for rotation */
         @keyframes rotate {
             0% {
                 transform: rotate(0deg);
@@ -35,10 +33,6 @@
                 transform: rotate(360deg);
             }
         }
-
-        html, body {
-              overflow: hidden; /* Prevents scrolling */
-          }
     </style>
 </head>
 <body>
