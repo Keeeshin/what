@@ -3,37 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hey guys</title>
+    <title>what</title>
     <style>
         /* Disable scrolling */
         html, body {
             margin: 0;
             overflow: hidden; /* Prevents scrolling */
             height: 100%; /* Ensures the content fits the viewport */
-            background-color: black; /* Static black background */
+            background-color: black; /* Fallback color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Rotating image */
-        #rotating-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: url('what.jpg') no-repeat center center;
-            background-size: cover;
+        /* Rotating image styling */
+        #rotating-image {
+            position: relative;
+            width: auto; /* Maintain the image's natural aspect ratio */
+            height: 100%; /* Scale image height to fit the screen */
             animation: rotate 20s linear infinite; /* Infinite rotation */
-        }
-
-        /* Welcome text styling */
-        .welcome-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Centers the text */
-            font-family: Arial, sans-serif; /* Plain font */
-            font-size: 24px; /* Standard readable size */
-            color: white; /* Stands out on the black background */
         }
 
         /* Keyframes for rotation */
@@ -48,7 +36,7 @@
     </style>
 </head>
 <body>
-    <div id="rotating-background"></div>
-    <div class="welcome-text">welcome to the website 🔥🔥💯</div>
+    <img id="rotating-image" src="what.jpg" alt="Rotating Image">
+    <div class="welcome-text">Welcome to My Website</div>
 </body>
 </html>
